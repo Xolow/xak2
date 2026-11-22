@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="ГруппаБыстрыхОтборов" id="100">
+			<Group>Horizontal</Group>
+			<ChildItems>
+		<InputField name="ОтборКорпус" id="1">
+			<DataPath>ОтборКорпус</DataPath>
+			<Title><v8:item><v8:lang>ru</v8:lang><v8:content>Корпус</v8:content></v8:item></Title>
+			<ContextMenu name="ОтборКорпусКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ОтборКорпусПодсказка" id="3"/>
+			<Events><Event name="OnChange">ОтборПриИзменении</Event></Events>
+		</InputField>
+		<InputField name="ОтборСтатус" id="4">
+			<DataPath>ОтборСтатус</DataPath>
+			<Title><v8:item><v8:lang>ru</v8:lang><v8:content>Статус</v8:content></v8:item></Title>
+			<ContextMenu name="ОтборСтатусКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ОтборСтатусПодсказка" id="6"/>
+			<Events><Event name="OnChange">ОтборПриИзменении</Event></Events>
+		</InputField>
+		<InputField name="ОтборИсполнитель" id="7">
+			<DataPath>ОтборИсполнитель</DataPath>
+			<Title><v8:item><v8:lang>ru</v8:lang><v8:content>Исполнитель</v8:content></v8:item></Title>
+			<ContextMenu name="ОтборИсполнительКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ОтборИсполнительПодсказка" id="9"/>
+			<Events><Event name="OnChange">ОтборПриИзменении</Event></Events>
+		</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="Список" id="10">
+			<DataPath>Список</DataPath>
+			<ContextMenu name="СписокКонтекстноеМеню" id="11"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="12"/>
+			<ChildItems>
+				<LabelField name="СписокDate" id="13"><DataPath>Список.Date</DataPath><ContextMenu name="СписокDateКонтекстноеМеню" id="14"/><ExtendedTooltip name="СписокDateПодсказка" id="15"/></LabelField>
+				<LabelField name="СписокNumber" id="16"><DataPath>Список.Number</DataPath><ContextMenu name="СписокNumberКонтекстноеМеню" id="17"/><ExtendedTooltip name="СписокNumberПодсказка" id="18"/></LabelField>
+				<LabelField name="СписокПомещение" id="19"><DataPath>Список.Помещение</DataPath><ContextMenu name="СписокПомещениеКонтекстноеМеню" id="20"/><ExtendedTooltip name="СписокПомещениеПодсказка" id="21"/></LabelField>
+				<LabelField name="СписокКатегория" id="22"><DataPath>Список.Категория</DataPath><ContextMenu name="СписокКатегорияКонтекстноеМеню" id="23"/><ExtendedTooltip name="СписокКатегорияПодсказка" id="24"/></LabelField>
+				<LabelField name="СписокИсполнитель" id="25"><DataPath>Список.Исполнитель</DataPath><ContextMenu name="СписокИсполнительКонтекстноеМеню" id="26"/><ExtendedTooltip name="СписокИсполнительПодсказка" id="27"/></LabelField>
+				<LabelField name="СписокПриоритет" id="28"><DataPath>Список.Приоритет</DataPath><ContextMenu name="СписокПриоритетКонтекстноеМеню" id="29"/><ExtendedTooltip name="СписокПриоритетПодсказка" id="30"/></LabelField>
+				<LabelField name="СписокСтатус" id="31"><DataPath>Список.Статус</DataPath><ContextMenu name="СписокСтатусКонтекстноеМеню" id="32"/><ExtendedTooltip name="СписокСтатусПодсказка" id="33"/></LabelField>
+				<LabelField name="СписокСрокВыполнения" id="34"><DataPath>Список.СрокВыполнения</DataPath><ContextMenu name="СписокСрокВыполненияКонтекстноеМеню" id="35"/><ExtendedTooltip name="СписокСрокВыполненияПодсказка" id="36"/></LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1"><Type><v8:Type>cfg:DynamicList</v8:Type></Type><MainAttribute>true</MainAttribute><Settings xsi:type="DynamicList"><ManualQuery>false</ManualQuery><DynamicDataRead>true</DynamicDataRead><MainTable>Document.Обращение</MainTable><ListSettings/></Settings></Attribute>
+		<Attribute name="ОтборКорпус" id="2"><Type><v8:Type>cfg:CatalogRef.Корпуса</v8:Type></Type></Attribute>
+		<Attribute name="ОтборСтатус" id="3"><Type><v8:Type>cfg:EnumRef.СтатусыОбращений</v8:Type></Type></Attribute>
+		<Attribute name="ОтборИсполнитель" id="4"><Type><v8:Type>cfg:CatalogRef.Исполнители</v8:Type></Type></Attribute>
+	</Attributes>
+</Form>

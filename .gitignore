@@ -1,0 +1,23 @@
+.DS_Store
+Thumbs.db
+.metadata/
+.settings/
+.vscode/
+.idea/
+*.1CD
+*.1cd
+*.1CL
+*.1cl
+*.cfl
+*.lgf
+*.lgp
+*.log
+1Cv8Log/
+1Cv8JobScheduler/
+1Cv8FTxt/
+ConfigDumpInfo.xml
+~$*.xlsx
+~$*.docx
+*.dt
+!/КампусНаСвязи.dt
+ДЛЯ ЖЮРИ_Ошибки.xlsx
