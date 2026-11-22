@@ -4,6 +4,7 @@
 	<UsePostingMode>Auto</UsePostingMode>
 	<RepostOnWrite>false</RepostOnWrite>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events><Event name="OnCreateAtServer">ПриСозданииНаСервере</Event></Events>
 	<ChildItems>
 		<UsualGroup name="Регистрация" id="35">
 			<Group>Horizontal</Group>
@@ -38,12 +39,29 @@
 			<DataPath>Объект.Помещение</DataPath>
 			<ContextMenu name="ПомещениеКонтекстноеМеню" id="8"/>
 			<ExtendedTooltip name="ПомещениеРасширеннаяПодсказка" id="9"/>
+			<Events><Event name="OnChange">ПомещениеИлиКатегорияПриИзменении</Event></Events>
 		</InputField>
 		<InputField name="Категория" id="13">
 			<DataPath>Объект.Категория</DataPath>
 			<ContextMenu name="КатегорияКонтекстноеМеню" id="14"/>
 			<ExtendedTooltip name="КатегорияРасширеннаяПодсказка" id="15"/>
+			<Events><Event name="OnChange">ПомещениеИлиКатегорияПриИзменении</Event></Events>
 		</InputField>
+		<InputField name="ПохожиеОбращения" id="41">
+			<DataPath>ТекстПохожихОбращений</DataPath>
+			<Title><v8:item><v8:lang>ru</v8:lang><v8:content>Возможные дубликаты</v8:content></v8:item></Title>
+			<ReadOnly>true</ReadOnly><MultiLine>true</MultiLine><Height>4</Height><HorizontalStretch>true</HorizontalStretch>
+			<ContextMenu name="ПохожиеОбращенияКонтекстноеМеню" id="42"/>
+			<ExtendedTooltip name="ПохожиеОбращенияПодсказка" id="43"/>
+		</InputField>
+		<LabelField name="ОткрытьПохожееОбращение" id="44">
+			<DataPath>ПервоеПохожееОбращение</DataPath>
+			<Title><v8:item><v8:lang>ru</v8:lang><v8:content>Открыть первое найденное обращение</v8:content></v8:item></Title>
+			<Hyperlink>true</Hyperlink>
+			<ContextMenu name="ОткрытьПохожееОбращениеКонтекстноеМеню" id="45"/>
+			<ExtendedTooltip name="ОткрытьПохожееОбращениеПодсказка" id="46"/>
+			<Events><Event name="Click">ОткрытьПохожееОбращениеНажатие</Event></Events>
+		</LabelField>
 		<InputField name="Описание" id="10">
 			<DataPath>Объект.Описание</DataPath>
 			<HorizontalStretch>true</HorizontalStretch>
@@ -117,5 +135,7 @@
 			<MainAttribute>true</MainAttribute>
 			<SavedData>true</SavedData>
 		</Attribute>
+		<Attribute name="ТекстПохожихОбращений" id="2"><Type><v8:Type>xs:string</v8:Type><v8:StringQualifiers><v8:Length>0</v8:Length><v8:AllowedLength>Variable</v8:AllowedLength></v8:StringQualifiers></Type></Attribute>
+		<Attribute name="ПервоеПохожееОбращение" id="3"><Type><v8:Type>cfg:DocumentRef.Обращение</v8:Type></Type></Attribute>
 	</Attributes>
 </Form>
